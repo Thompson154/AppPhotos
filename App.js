@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+
+import ForYouScreen from "./src/screens/ForYouScreen";
+import MemoriesForYouScreen from "./src/screens/MemoriesForYouScreen";
+import AlbumScreen from "./src/screens/AlbumsScreen";
+import MyAlbumsScreen from "./src/screens/MyAlbumsScreen";
+import AlbumYearsScreen from "./src/screens/AlbumYearsScreen";
+import AlbumMothYearsScreen from "./src/screens/AlbumMonthYearsScreen";
+import SearchScreen from "./src/screens/SearchScreen";
+
+import { Footer } from "./src/layout/Footer";
+
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      {/* <ForYouScreen/> */}
+      {/* <MemoriesForYouScreen/> */}
+      {/* <AlbumScreen/> */}
+      {/* <MyAlbumsScreen/> */}
+      {/* <AlbumYearsScreen/> */}
+      {/* <AlbumMothYearsScreen/> */}
+      {/* <SearchScreen/> */}
+      <Stack.Navigator screenOptions={{headerShown:false}}>
+        <Stack.Screen name="tab" component={Footer} />
+      </Stack.Navigator>
+      
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
