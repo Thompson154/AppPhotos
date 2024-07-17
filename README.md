@@ -15,7 +15,7 @@ Este proyecto es una recreación de la aplicación de Photos de iOS utilizando R
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/tu-usuario/ios-photos-clone.git
+    https://github.com/Thompson154/AppPhotos.git
     cd ios-photos-clone
     ```
 
